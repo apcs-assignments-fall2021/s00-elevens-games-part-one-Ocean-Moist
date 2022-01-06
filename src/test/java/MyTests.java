@@ -77,31 +77,31 @@ public class MyTests {
         assertNotEquals(deck1, deck2, "The shuffled deck should not match the original deck");
     }
 
-//    @Test
-//    public void testPerfectShuffle() {
-//        System.out.println("The perfect shuffle is being tested with a deck consisting of: ");
-//        System.out.println("jack of spades, queen of spades, king of spades, ace of spades, jack of hearts, queen of hearts, king of hearts, ace of hearts");
-//        System.out.println();
-//        System.out.println("The result of a perfect shuffle should be:");
-//        System.out.println("jack of spades, jack of hearts, queen of spades, queen of hearts, king of spades, king of hearts, ace of spades, ace of hearts");
-//
-//        String[] ranks = {"jack", "queen", "king", "ace" };
-//        String[] suits = { "spades", "hearts" };
-//        int[] pointValues = { 0, 0, 0, 0 };
-//
-//        // deck1 would be: JoS, QoS, KoS, AoS, JoH, QoH, KoH, AoH
-//        Deck deck1 = new Deck(ranks, suits, pointValues);
-//        deck1.perfectShuffle();
-//
-//        // perfect shuffle should give: JoS, JoH, QoS, QoH, KoS, KoH, AoS, AoH
-//        Card c1 = new Card("jack", "spades", 0);
-//        Card c2 = new Card("jack", "hearts", 0);
-//        Card c3 = new Card("queen", "spades", 0);
-//        Card c4 = new Card("ace", "hearts", 0);
-//
-//        assertEquals(c1, deck1.getCardAtIndex(0), "After the perfect shuffle, the first card should be: jack of spades");
-//        assertEquals(c2, deck1.getCardAtIndex(1), "After the perfect shuffle, the second card should be: jack of hearts");
-//        assertEquals(c3, deck1.getCardAtIndex(2), "After the perfect shuffle, the third card should be: queen of spades");
-//        assertEquals(c4, deck1.getCardAtIndex(7), "After the perfect shuffle, the last card should be: ace of hearts");
-//    }
+    @Test
+    public void testPerfectShuffle() {
+        System.out.println("The perfect shuffle is being tested with a deck consisting of: ");
+        System.out.println("jack of spades, queen of spades, king of spades, ace of spades, jack of hearts, queen of hearts, king of hearts, ace of hearts");
+        System.out.println();
+        System.out.println("The result of a perfect shuffle should be:");
+        System.out.println("jack of spades, jack of hearts, queen of spades, queen of hearts, king of spades, king of hearts, ace of spades, ace of hearts");
+
+        String[] ranks = {"jack", "queen", "king", "ace" };
+        String[] suits = { "spades", "hearts" };
+        int[] pointValues = { 0, 0, 0, 0 };
+
+        // deck1 would be: JoS, QoS, KoS, AoS, JoH, QoH, KoH, AoH
+        Deck deck1 = new Deck(ranks, suits, pointValues);
+        deck1.perfectShuffle();
+
+        // perfect shuffle should give: JoS, JoH, QoS, QoH, KoS, KoH, AoS, AoH
+        Card c1 = new Card("jack", "spades", 0);
+        Card c2 = new Card("jack", "hearts", 0);
+        Card c3 = new Card("queen", "spades", 0);
+        Card c4 = new Card("ace", "hearts", 0);
+
+        assertEquals(c1, deck1.getCardAtIndex(0), "After the perfect shuffle, the first card should be: jack of spades");
+        assertEquals(c2, deck1.getCardAtIndex(1), "After the perfect shuffle, the second card should be: jack of hearts");
+        assertEquals(c3, deck1.getCardAtIndex(2), "After the perfect shuffle, the third card should be: queen of spades");
+        assertEquals(c4, deck1.getCardAtIndex(7), "After the perfect shuffle, the last card should be: ace of hearts");
+    }
 }
