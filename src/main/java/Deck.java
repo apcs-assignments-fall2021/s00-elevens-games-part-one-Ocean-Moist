@@ -74,9 +74,9 @@ public class Deck {
     // Before shuffling: [1, 2, 3, 4, 5, 21, 22, 23, 24, 25]
     // After shuffling: [1, 21, 2, 22, 3, 23, 4, 24, 5, 25]
     public void perfectShuffle() {
-        int mid = (cardsList.size() - 2) / 2;
-        for (int i = 0; i < mid; i++) {
-			cardsList.add(mid + 2 + i, cardsList.get(1));
+        int mid = (cardsList.size() / 2) - 1;
+        for (int i = 2; i < mid + 2; i++) {
+			cardsList.add(mid + i, cardsList.get(1));
 			cardsList.remove(1);
         }
     }
