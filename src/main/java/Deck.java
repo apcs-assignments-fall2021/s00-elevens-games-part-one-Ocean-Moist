@@ -66,6 +66,7 @@ public class Deck {
             cardsList.set(i, cardsList.get(randomIndex));
             cardsList.set(randomIndex, temp);
         }
+        size = cardsList.size();
     }
 
     // OPTIONAL: Write code that carries out a "perfect" shuffle
